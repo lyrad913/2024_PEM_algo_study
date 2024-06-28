@@ -14,26 +14,27 @@
 
 1. 이 저장소를 `fork` 한다.
 2. 생성된 원격 저장소에 `이름` 혹은 `github ID`로 폴더를 생성한다.
-3. 생성된 폴더에 **템플릿**을 활용해 자신의 풀이를 업로드 한다. (폴더명에 콜론":" 안됩니다!)
-4. 원본 저장소로 `Pull Request`를 한다.
-5. ***주의!! 기존 폴더를 지우면 안됩니다!!*** 개인 폴더 내부만 수정해주세요 :)
+3. 생성된 폴더에 `template.md`를 활용해 **자신의 템플릿**을 만든다.
+4. 만든 템플릿을 이용해 자신의 풀이를 업로드 한다. (폴더명에 콜론":" 안됩니다!)
+5. 원본 저장소로 `Pull Request`를 한다.
+6. ***주의!! 기존 폴더를 지우면 안됩니다!!*** 개인 폴더 내부만 수정해주세요 :)
 
 그렇다고 합니다... 위에 따라하면 되나봐요.
 
 ## 진행방법
 
 - 강의(36강)
-  - 4강/1주
+  - 약 4강/1주
   - 주 1회 미팅 진행해서 간략한 복습
 - 문풀
   - 매일 한 문제 풀고 풀이 작성하여 `Pull Request`(PR)
   - (다른 사람 PR 보고 자유롭게 코멘트)
-  - 문제는 자유(백준, 프로그래머스, 리트코드) 다 상관없음
-  - 주 1회 미팅 공유하고 싶은 문제 한 문제 골라서 소개하기.
+  - 문제는 자유(백준, 프로그래머스, 리트코드...), 딱히 없으면 solved.ac를 활용하거나, 아래 참고 자료의 문제집 활용
+  - 미팅 시간에 주간 풀었던 문제 중 공유하고 싶은 문제 한 문제 골라서 소개하고, 피드백.
 
 페널티 없음.
 
-## 참고자료
+## 참고자료(바킹독)
 
-- [**강의**](https://youtube.com/playlist?list=PLtqbFd2VIQv4O6D6l9HcD732hdrnYb6CY&feature=shared)
-- [**문제집**](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook.md)
+- **강의** : (https://youtube.com/playlist?list=PLtqbFd2VIQv4O6D6l9HcD732hdrnYb6CY&feature=shared)
+- **문제집** : (https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook.md)
