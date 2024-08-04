@@ -3,6 +3,11 @@
     "xstring": "cpp",
     "utility": "cpp",
     "algorithm": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "array": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "vector": "cpp",
+    "xutility": "cpp"
   },
 }
