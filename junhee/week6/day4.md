@@ -160,4 +160,86 @@ ez
 
 #### 왜 저 풀이를 떠올리지 못했을까?
 
-.
+# [2252-줄 세우기](https://www.acmicpc.net/problem/2252)
+
+## 풀이
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+using graph = vector<vector<int>>;
+
+stack<int> ret;
+
+void dfs(const graph& g, vector<int>& visited, int here) {
+  for (int i = 0; i < g[here].size(); ++i) {
+    int there = g[here][i];
+    if (visited[there] == 0) {
+      visited[there] = 1;
+      dfs(g, visited, there);
+    }
+  }
+  ret.push(here);
+}
+
+void dfsAll(const graph& g, vector<int>& visited) {
+  for (int here = 1; here < g.size(); ++here) {
+    if (visited[here] == 0) {
+      visited[here] = 1;
+      dfs(g, visited, here);
+    }
+  }
+  while (!ret.empty()) {
+    cout << ret.top() << " ";
+    ret.pop();
+  }
+}
+
+int main(void) {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n, m;
+  cin >> n >> m;
+
+  graph g(n + 1);
+  for (int i = 0; i < m; ++i) {
+    int a, b;
+    cin >> a >> b;
+    g[a].push_back(b);
+  }
+  vector<int> visited(n + 1, 0);
+
+  dfsAll(g, visited);
+
+  return 0;
+}
+```
+
+(복잡도 생략 가능)  
+시간 복잡도 : $O(V+E)$  
+공간 복잡도 : $O()$   
+
+dfs의 역순 출력이니까 V+E겠지
+
+## 회고(지나치게 간단한 문제는 생략 가능)
+
+### 간단한 풀이와 접근 방식
+
+위상 정렬은 dfs의 역순
+
+### 왜 그러한 풀이를 했는지?
+
+
+
+### (틀렸다면) 오답 원인
+
+
+
+### (참고했다면) 참고한 코드
+
+  
+#### 왜 저 풀이를 떠올리지 못했을까?
+
