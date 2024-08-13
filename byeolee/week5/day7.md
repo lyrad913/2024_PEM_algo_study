@@ -24,9 +24,10 @@ int main(){
     for(int k=1; k<=n; k++){
         for(int s=1; s<=n; s++){
             for(int t=1; t<=n; t++){
-                if(d[s][k] + d[k][t] < d[s][t])
+                if(d[s][k] + d[k][t] < d[s][t]){
                     d[s][t] = d[s][k] + d[k][t];
                     nxt[s][t] = nxt[s][k]; //중간 정점 저장(s와 가까운 정점)
+                }
             }
         }
     }
@@ -53,11 +54,10 @@ int main(){
             }
             path.push_back(j);
             cout << path.size() << ' ';
-            for(int x : path) cout << x << ' ';
+            for(auto x : path) cout << x << ' ';
             cout << '\n';
         }
     }
-    return 0;
 }
 ```
 
@@ -68,6 +68,18 @@ int main(){
 - 도시 i에서 j로 가는데 필요한 최소 비용 → 최단거리 테이블
 - 도시 i에서 j로 가는 경로 → nxt 테이블
 
-## 메모리 초과
+## 오류(메모리 초과)
 
 m이 큰 경우 nxt 행렬이 메모리를 많이 차지
+
+```cpp
+if (condition)
+    statement1;
+    statement2;
+```
+
+위 코드 경우, 조건이 참일 때 실행되는 것은 첫번째 문장만이고 두번째 문장은 조건에 상관없이 항상 실행된다 
+
+따라서 둘다 조건에 따라 실행하고자 한다면 중괄호를 사용하여야 한다
+
+→ 중괄호를 사용하는 것을 빼먹어서 메모리 초과가 걸렸다
